@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li> 
+            <li><a href="About.html">About & Skills</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="text-align: center; margin-top: 80px; margin-bottom: 80px;">
+        <h1 style="font-size: 3.5rem; margin: 10px 0; letter-spacing: 2px;">THANASIT PHONYOTHA</h1>
+        <h2 style="color: #e0e0e0; font-weight: normal; margin-bottom: 30px;">
+            <span style="color: #9d4edd;">Software Developer</span> & <span style="color: #9d4edd;">Game Developer</span>
+        </h2>
+        <p style="color: #aaa; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.8; font-size: 1.05rem;">
+            I am a 3rd-year student majoring in Digital Technology at the Institute of Digital Arts and Science, Suranaree University of Technology. Passionate about both Software and Game Development, I enjoy turning complex logic into fun and functional experiences. I am a highly flexible and motivated learner, eager to master new technologies and leverage practical experience to tackle diverse technical challenges.
+        </p>
+        
+        <a href="contact.html" style="text-decoration: none;">
+            <button class="btn-resume">View Resume</button>
+        </a> 
+    </div>
+
+    <hr style="border-color: #333; opacity: 0.5; max-width: 800px; margin: 0 auto;">
+
+    <div id="featured" class="container" style="margin-top: 80px;">
+        
+        <div class="featured-header">
+            <div>
+                <h2 class="section-title" style="margin: 0; text-align: left; font-size: 2rem;">Projects</h2>
+            </div>
+            <a href="portfolio.html" class="view-all-link">
+                View All Projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="featured-grid">
+
+            <div class="glass-card project-card">
+                <div class="card-img-holder">
+                    <img src="image/cg7.png" alt="Chess Game" onerror="this.src='https://placehold.co/600x350/1a1a1a/fa5c5c?text=Chess+Game'">
+                </div>
+                <div class="card-info">
+                    <div class="card-top">
+                        <span class="card-badge game">Game Dev</span>
+                        <span class="status-badge">Completed</span>
+                    </div>
+                    <h3>ChessGame (OOP)</h3>
+                    <p>A strategic board game developed to apply Object-Oriented Programming principles using Java.</p>
+                    <div class="card-tags">
+                        <span>Java</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card project-card">
+                <div class="card-img-holder">
+                    <img src="https://placehold.co/600x350/1a1a1a/2ec4b6?text=Mental+Health+App" alt="Mental Health App">
+                </div>
+                <div class="card-info">
+                    <div class="card-top">
+                        <span class="card-badge app">Software Dev</span>
+                        <span class="status-badge ">Completed</span>
+                    </div>
+                    <h3>Mental Health AI App</h3>
+                    <p>A mobile application that uses AI to analyze user emotions and provide initial mental health support.</p>
+                    <div class="card-tags">
+                        <span>React Native</span>
+                        <span>JavaScript</span>
+                        <span>AI</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>© 2025 THANASIT PHONYOTHA. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

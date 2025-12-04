@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About & Skills</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="margin-top: 30px; margin-bottom: 10px;">
+        <a href="portfolio.html" style="text-decoration: none; color: #9d4edd; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+    </div>
+
+    <div class="container" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border-radius: 16px; padding: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 50px;">
+        
+        <div style="width: 100%; height: 400px; position: relative;">
+            <img id="viewCover" src="" alt="Project Cover" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to top, #0d0d0d, transparent);"></div>
+        </div>
+
+        <div style="padding: 40px;">
+            <h1 id="viewTitle" style="color: #fff; font-size: 2.5rem; margin-top: 0; margin-bottom: 20px; text-shadow: 0 0 10px rgba(157, 78, 221, 0.5);">Loading...</h1>
+
+            <hr style="border-color: #333; margin-bottom: 30px;">
+
+            <div id="viewDesc" style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                </div>
+
+            <h2 style="color: #9d4edd; margin-top: 50px; margin-bottom: 25px; border-left: 5px solid #9d4edd; padding-left: 15px;">Project Gallery</h2>
+            
+            <div id="viewGallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Thanasit Phonyotha. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ดึงข้อมูลจาก LocalStorage
+            const projectData = localStorage.getItem('currentProject');
+            
+            if (projectData) {
+                const data = JSON.parse(projectData);
+                
+                // นำข้อมูลไปแปะใน HTML
+                document.getElementById('viewTitle').innerText = data.title;
+                document.getElementById('viewCover').src = data.cover;
+                document.getElementById('viewDesc').innerHTML = data.desc;
+                document.getElementById('viewGallery').innerHTML = data.gallery;
+
+                // ปรับ CSS ของรูปใน Gallery ให้สวยงาม
+                const galleryImages = document.querySelectorAll('#viewGallery img');
+                galleryImages.forEach(img => {
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                    img.style.borderRadius = '8px';
+                    img.style.border = '1px solid #333';
+                    img.style.transition = 'transform 0.3s';
+                    img.style.cursor = 'zoom-in';
+                    
+                    // เพิ่ม Effect ตอนเอาเมาส์ชี้
+                    img.onmouseover = () => { img.style.transform = 'scale(1.02)'; img.style.borderColor = '#9d4edd'; };
+                    img.onmouseout = () => { img.style.transform = 'scale(1)'; img.style.borderColor = '#333'; };
+                });
+
+            } else {
+                // ถ้าไม่มีข้อมูล (เช่น คนกดเข้ามาหน้านี้ตรงๆ) ให้เด้งกลับหน้า Portfolio
+                window.location.href = 'portfolio.html';
+            }
+        });
+    </script>
+
+</body>
+</html>
