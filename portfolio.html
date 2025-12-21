@@ -13,9 +13,14 @@
         <div class="logo">PORTFOLIO</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About & Skills</a></li>
+            <li><a href="About.html">About</a></li>
             <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </nav>
 
@@ -40,7 +45,7 @@
                 
                 <div class="hidden-data">
                     <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
+                        <p><strong>Status:</strong> <span>Completed</span></p>
                         
                         <p><strong>Overview:</strong> Developed as a coursework project with the objective of building a game application based on specific requirements. The project focused on applying Object-Oriented Programming (OOP) principles to create a functional board game system using Java.</p>
                         
@@ -83,7 +88,7 @@
 
                 <div class="hidden-data">
                     <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #ff9f1c; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Work in Progress</span></p>
+                        <p><strong>Status:</strong> <span>Work in Progress</span></p>
 
                         <p><strong>Overview:</strong> Developed as a Mini Project for the Computer Game Development course under Game Jam-style constraints. The project followed a Q1 Seasonal Event prompt, leading to the creation of an Easter-themed game. It is designed as a casual, fast-paced game focusing on quick gameplay loops.</p>
                         
@@ -129,7 +134,7 @@
 
                 <div class="hidden-data">
                     <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
+                        <p><strong>Status:</strong> <span>Completed</span></p>
 
                         <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class. The primary objective was to master Unity Engine fundamentals focusing on C# scripting, 2D physics mechanics.</p>
                         <p><strong>Languages:</strong> C# </p>
@@ -162,7 +167,7 @@
 
                 <div class="hidden-data">
                     <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
+                        <p><strong>Status:</strong> <span>Completed</span></p>
 
                         <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class to master Unity Engine fundamentals, specifically focusing on C# scripting to implement directional movement and dynamic tail growth mechanics.</p>
                         <p><strong>Languages:</strong> C#</p>
@@ -196,7 +201,7 @@
 
                 <div class="hidden-data">
                     <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
+                        <p><strong>Status:</strong> <span>Completed</span></p>
 
                         <p><strong>Overview:</strong></p>
                         <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
@@ -224,7 +229,7 @@
                     </div>
 
                     <div class="data-gallery">
-                        <h5 style="color: #9d4edd; margin-bottom: 10px; font-weight: bold;">[User Screens]</h5>
+                        <h5 style="color: var(--text-primary); margin-bottom: 10px; font-weight: bold;">[User Screens]</h5>
                         <img src="image/app/mh1.png">
                         <img src="image/app/mh2.png">
                         <img src="image/app/mh3.png">
@@ -236,7 +241,7 @@
                         <img src="image/app/mh9.png">
                         <img src="image/app/mh10.png">
                         
-                        <h5 style="color: #9d4edd; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">[Admin Screens]</h5>
+                        <h5 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px; font-weight: bold;">[Admin Screens]</h5>
                         <img src="image/app/mhb1.png" style="width: 500px; height: auto;">
                         <img src="image/app/mhb2.png" style="width: 500px; height: auto;">
                         <img src="image/app/mhb3.png" style="width: 500px; height: auto;">
@@ -251,6 +256,29 @@
     </div>
 
     <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = toggleBtn.querySelector('i');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
         function filterProjects(category) {
             const projects = document.querySelectorAll('.project-item');
             const buttons = document.querySelectorAll('.filter-btn');

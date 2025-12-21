@@ -13,9 +13,14 @@
         <div class="logo">PORTFOLIO</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="About.html" class="active">About & Skills</a></li>
+            <li><a href="About.html" class="active">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </nav>
 
@@ -43,7 +48,7 @@
                 </p>
 
                 <p>
-                    My Goal To grow as a game developer who turns fun ideas into real, playable experiences. I want to work on projects where I get to build cool mechanics, refine gameplay, and help create moments that players enjoy, remember, and genuinely have fun.
+                    My Goal is To grow as a game developer who turns fun ideas into real, playable experiences. I want to work on projects where I get to build cool mechanics, refine gameplay, and help create moments that players enjoy, remember, and genuinely have fun.
                 </p>
             </div>
         </div>
@@ -66,7 +71,6 @@
             <div class="skills-grid">
                 <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><p>React</p></div>
                 <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native"><p>React Native</p></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="invert-icon"><p>Next.js</p></div>
             </div>
         </div>
 
@@ -90,7 +94,7 @@
                 <h4>Digital Hackathon Suranaree Next Living</h4>
                 <p class="role">Participant & Developer</p>
                 
-                <p style="font-size: 0.9rem; color: #ddd; margin-bottom: 15px;">
+                <p>
                     Participated in a hackathon competition to develop digital solutions aimed at solving urban issues in Nakhon Ratchasima (Korat). Collaborated with a team to brainstorm and prototype ideas under the 'Next Living' concept.
                 </p>
                 
@@ -105,7 +109,7 @@
                 <h4>Korat Esports 2022 (RoV Tournament)</h4>
                 <p class="role">1st Runner-up Award</p>
                 
-                <p style="font-size: 0.9rem; color: #ddd; margin-bottom: 15px;">
+                <p>
                     Competed in the RoV mobile MOBA tournament held at Suranaree University of Technology (SUT). Demonstrated strategic teamwork and coordination, successfully achieving the 1st Runner-up position (Vice Champion).
                 </p>
 
@@ -200,14 +204,34 @@
 
     </div>
 
+    <div id="imgModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
     <script>
-        const modalHTML = `
-            <div id="imgModal" class="image-modal">
-                <span class="close-modal">&times;</span>
-                <img class="modal-content" id="img01">
-            </div>
-        `;
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = toggleBtn.querySelector('i');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
 
         const modal = document.getElementById("imgModal");
         const modalImg = document.getElementById("img01");

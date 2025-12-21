@@ -10,8 +10,8 @@
         #copy-toast {
             visibility: hidden;
             min-width: 250px;
-            background-color: #333;
-            color: #fff;
+            background-color: var(--accent-color);
+            color: var(--bg-card);
             text-align: center;
             border-radius: 50px;
             padding: 16px;
@@ -21,10 +21,11 @@
             bottom: 30px;
             transform: translateX(-50%);
             font-size: 1rem;
-            border: 1px solid #9d4edd;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 2px solid var(--border-color);
+            box-shadow: var(--shadow-hard);
             opacity: 0;
             transition: opacity 0.3s, bottom 0.3s;
+            font-weight: bold;
         }
 
         #copy-toast.show {
@@ -43,8 +44,8 @@
         .copy-hint {
             margin-left: auto;
             font-size: 0.8rem;
-            color: #888;
-            border: 1px solid #555;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
             padding: 2px 8px;
             border-radius: 4px;
         }
@@ -56,9 +57,14 @@
         <div class="logo">PORTFOLIO</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About & Skills</a></li>
+            <li><a href="About.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </nav>
 
@@ -83,23 +89,23 @@
                 <h3>Connect on Social Media</h3>
                 
                 <div class="social-icons-grid">
-                    <a href="https://github.com/ArmThanasit" target="_blank" class="social-btn github">
+                    <a href="https://github.com/ArmThanasit" target="_blank" class="social-btn">
                         <i class="fa-brands fa-github"></i>
                     </a>
                     
-                    <a href="https://johnarm.itch.io" target="_blank" class="social-btn itch">
+                    <a href="https://johnarm.itch.io" target="_blank" class="social-btn">
                         <i class="fa-brands fa-itch-io"></i>
                     </a>
     
-                    <a href="https://www.facebook.com/arm.thanasit.2024/" target="_blank" class="social-btn facebook">
+                    <a href="https://www.facebook.com/arm.thanasit.2024/" target="_blank" class="social-btn">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
 
-                    <a href="https://www.instagram.com/ths.arm/" target="_blank" class="social-btn instagram">
+                    <a href="https://www.instagram.com/ths.arm/" target="_blank" class="social-btn">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a href="https://line.me/ti/p/1fjNtqN_-k" target="_blank" class="social-btn line">
+                    <a href="https://line.me/ti/p/1fjNtqN_-k" target="_blank" class="social-btn">
                         <i class="fa-brands fa-line"></i>
                     </a>
                 </div>
@@ -111,12 +117,35 @@
     <div id="copy-toast">Copied to clipboard!</div>
 
     <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = toggleBtn.querySelector('i');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
         function copyToClipboard(text, message) {
             navigator.clipboard.writeText(text).then(function() {
                 showToast(message);
             }, function(err) {
                 console.error('Could not copy text: ', err);
-                prompt("Copy this email:", text);
+                prompt("Copy this info:", text);
             });
         }
 
