@@ -20,11 +20,11 @@
     </nav>
 
     <div class="container">
-        <h1 class="section-title">My Projects</h1>
+        <h1 class="section-title">PORTFOLIO</h1>
 
         <div class="filter-container">
             <button class="filter-btn active" onclick="filterProjects('game')">Game Dev</button>
-            <button class="filter-btn" onclick="filterProjects('software')">Software Dev</button>
+            <button class="filter-btn" onclick="filterProjects('software')">Mobile App</button>
         </div>
 
         <div class="project-list">
@@ -49,14 +49,14 @@
                             <li><strong>System Integration:</strong> Managed UI navigation between Main Menu, Gameplay, and Leaderboard scenes.</li>
                             <li><strong>Game Mechanics:</strong> Implemented "Valid Move Highlighting" algorithm to guide player moves.</li>
                             <li><strong>Scoring System:</strong> Developed logic for tracking wins/losses and updating rankings.</li>
-                            <li><strong>Data Management:</strong> Created the player search feature to filter and display records from the database.</li>
+                            <li><strong>Data Management: </strong> Created a player search feature to filter and retrieve score records stored in text files.</li>
                         </ul>
 
                         <p><strong>Languages:</strong> Java</p>
                         <p><strong>Tools:</strong> Eclipse IDE</p>
 
                         <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://github.com/ArmThanasit/YOUR-CHESS-REPO" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                            <a href="https://github.com/ArmThanasit/ChessGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
@@ -68,6 +68,52 @@
                         <img src="image/cg4.png">
                         <img src="image/cg5.png">
                         <img src="image/cg6.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
+                <div class="cert-img-wrapper project-img">
+                    <img src="image/egg1.png" alt="Cover">
+                </div>
+                <div class="cert-content">
+                    <h4>Egg A Luck</h4>
+                    <p>Conceptual design for a farming simulation game tailored for SUT Farm.</p>
+                </div>
+
+                <div class="hidden-data">
+                    <div class="data-desc">
+                        <p><strong>Status:</strong> <span style="background: #ff9f1c; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Work in Progress</span></p>
+
+                        <p><strong>Overview:</strong> Developed as a Mini Project for the Computer Game Development course under Game Jam-style constraints. The project followed a Q1 Seasonal Event prompt, leading to the creation of an Easter-themed game. It is designed as a casual, fast-paced game focusing on quick gameplay loops.</p>
+                        
+                        <p><strong>Key Responsibilities:</strong></p>
+                        <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
+                            <li><strong>Game Design:</strong> Collaborated on the Game Design Document (GDD) to define core gameplay mechanics and the game's overall theme.</li>
+                            <li><strong>Character Mechanics:</strong> Implemented C# scripts for Character Movement and the Combat System to ensure responsive control and interaction.</li>
+                            <li><strong>Item System:</strong> Developed an RNG System (Random Number Generation) to manage the spawning logic and probability of various egg types.</li>
+                            <li><strong>Enemy System:</strong> Programmed Enemy AI to autonomously track, chase, and consume Chickens and Bunnys using tag-based pathfinding logic.</li>
+                            <li><strong>Buff & Debuff System:</strong> Designed a dynamic modifier system where specific units (Guardian Bunnies) apply stacking buffs to global game parameters.</li>
+                            <li><strong>Audio System:</strong> Engineered the Audio Manager and settings UI to allow for real-time volume adjustment (SFX and Music).</li>
+                        </ul>
+                         <p><strong>Languages:</strong> C# </p>
+                        <p><strong>Tools:</strong> Unity , Visual Studio 2022</p>
+                        
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
+                            <a href="https://github.com/ArmThanasit/Eggaluck" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            
+                            <a href="https://www.youtube.com/watch?v=-rtPCMIN2Mo" target="_blank" style="text-decoration: none; background: #cc0000; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #cc0000; transition: 0.3s;">
+                                <i class="fa-brands fa-youtube"></i> Watch Gameplay
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="data-gallery">
+                        <img src="image/egg2.png">
+                        <img src="image/egg3.png">
+                        <img src="image/egg4.png">
                     </div>
                 </div>
             </div>
@@ -87,13 +133,13 @@
 
                         <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class. The primary objective was to master Unity Engine fundamentals focusing on C# scripting, 2D physics mechanics.</p>
                         <p><strong>Languages:</strong> C# </p>
-                        <p><strong>Tools:</strong> Unity</p>
+                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
 
                         <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
                             <a href="https://johnarm.itch.io/towerbox" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
                                 <i class="fa-brands fa-itch-io"></i> Play on Itch.io
                             </a>
-                            <a href="https://github.com/ArmThanasit/YOUR-TOWERBOX-REPO" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                            <a href="https://github.com/ArmThanasit/TowerBox" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
@@ -107,82 +153,34 @@
 
             <div class="cert-card project-item game" onclick="openProject(this, 'game')">
                 <div class="cert-img-wrapper project-img">
-                    <img src="image/rb1.jpg" alt="Cover">
+                    <img src="image/Snake.png" alt="Snake Game Cover">
                 </div>
                 <div class="cert-content">
-                    <h4>Roll A Ball</h4>
-                    <p>3D game with Enemy Tracking System developed for Game Design class.</p>
+                    <h4>Snake Game</h4>
+                    <p>Classic arcade game focusing on data structures and game loop logic.</p>
                 </div>
 
                 <div class="hidden-data">
                     <div class="data-desc">
                         <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
 
-                        <p><strong>Overview:</strong> Developed as a coursework project for the Computer Game Design class. This game enhances the classic Roll-a-Ball mechanics by introducing an <strong>Enemy Tracking System</strong> where AI opponents actively pursue the player.</p>
-                        <p><strong>Key Features:</strong> Enemy AI Tracking, Win/Lose Conditions, Physics Movement.</p>
-                        <p><strong>Languages:</strong> C# </p>
-                        <p><strong>Tools:</strong> Unity</p>
+                        <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class to master Unity Engine fundamentals, specifically focusing on C# scripting to implement directional movement and dynamic tail growth mechanics.</p>
+                        <p><strong>Languages:</strong> C#</p>
+                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
 
                         <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://johnarm.itch.io/rollaball" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
+                            <a href="https://johnarm.itch.io/snakegame" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
                                 <i class="fa-brands fa-itch-io"></i> Play on Itch.io
                             </a>
-                            <a href="https://github.com/ArmThanasit/YOUR-ROLLABALL-REPO" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                            <a href="https://github.com/ArmThanasit/SnakeGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
                     <div class="data-gallery">
-                        <img src="image/rb3.png">
-                        <img src="image/rb2.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="https://placehold.co/800x400/1a1a1a/9d4edd?text=In Progress" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>EGG A LUCK</h4>
-                    <p>Conceptual design for a farming simulation game tailored for SUT Farm.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #ff9f1c; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Work in Progress</span></p>
-
-                        <p><strong>Overview:</strong> A simulation game designed to educate students about smart farming technologies.</p>
-                        <p><strong>Objective:</strong> Manage resources and plant crops using IoT devices.</p>
-                        <p><strong>Tech Stack:</strong> Unity, Game Design Document (GDD)</p>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="https://placehold.co/600x400/333/ccc?text=Farm+Layout">
-                        <img src="https://placehold.co/600x400/333/ccc?text=IoT+Device">
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="https://placehold.co/800x400/1a1a1a/9d4edd?text=In Progress" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>SUT Farm</h4>
-                    <p>Conceptual design for a farming simulation game tailored for SUT Farm.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #ff9f1c; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Work in Progress</span></p>
-
-                        <p><strong>Overview:</strong> A simulation game designed to educate students about smart farming technologies.</p>
-                        <p><strong>Objective:</strong> Manage resources and plant crops using IoT devices.</p>
-                        <p><strong>Tech Stack:</strong> Unity, Game Design Document (GDD)</p>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="https://placehold.co/600x400/333/ccc?text=Farm+Layout">
-                        <img src="https://placehold.co/600x400/333/ccc?text=IoT+Device">
+                        <img src="image/sn1.png">
+                        <img src="image/sn2.png">
+                        <img src="image/sn3.png">
                     </div>
                 </div>
             </div>
@@ -245,31 +243,6 @@
                         <img src="image/app/mhb4.png" style="width: 500px; height: auto;">
                         <img src="image/app/mhb5.png" style="width: 500px; height: auto;">
                         <img src="image/app/mhb6.png" style="width: 500px; height: auto;">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item software" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="https://placehold.co/800x400/1a1a1a/ffffff?text=MeetFest Korat" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>MeetFest Korat</h4>
-                    <p>Responsive personal portfolio website designed with modern glassmorphism UI.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span style="background: #2ec4b6; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></p>
-
-                        <p><strong>Overview:</strong> My personal portfolio to showcase my skills and projects.</p>
-                        <p><strong>Design:</strong> Dark Theme with Glassmorphism effects.</p>
-                        <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</p>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="https://placehold.co/600x400/000/fff?text=Design+System">
-                        <img src="https://placehold.co/600x400/000/fff?text=Code+Structure">
                     </div>
                 </div>
             </div>

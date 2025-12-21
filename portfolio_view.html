@@ -53,19 +53,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // ดึงข้อมูลจาก LocalStorage
             const projectData = localStorage.getItem('currentProject');
             
             if (projectData) {
                 const data = JSON.parse(projectData);
                 
-                // นำข้อมูลไปแปะใน HTML
                 document.getElementById('viewTitle').innerText = data.title;
                 document.getElementById('viewCover').src = data.cover;
                 document.getElementById('viewDesc').innerHTML = data.desc;
                 document.getElementById('viewGallery').innerHTML = data.gallery;
 
-                // ปรับ CSS ของรูปใน Gallery ให้สวยงาม
                 const galleryImages = document.querySelectorAll('#viewGallery img');
                 galleryImages.forEach(img => {
                     img.style.width = '100%';
@@ -74,14 +71,12 @@
                     img.style.border = '1px solid #333';
                     img.style.transition = 'transform 0.3s';
                     img.style.cursor = 'zoom-in';
-                    
-                    // เพิ่ม Effect ตอนเอาเมาส์ชี้
+
                     img.onmouseover = () => { img.style.transform = 'scale(1.02)'; img.style.borderColor = '#9d4edd'; };
                     img.onmouseout = () => { img.style.transform = 'scale(1)'; img.style.borderColor = '#333'; };
                 });
 
             } else {
-                // ถ้าไม่มีข้อมูล (เช่น คนกดเข้ามาหน้านี้ตรงๆ) ให้เด้งกลับหน้า Portfolio
                 window.location.href = 'portfolio.html';
             }
         });

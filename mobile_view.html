@@ -113,7 +113,6 @@
                 document.getElementById('viewCover').src = data.cover;
                 document.getElementById('viewDesc').innerHTML = data.desc;
 
-                // --- ส่วนสำคัญ: โค้ดแยกรูปตามหัวข้อ H5 ---
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = data.gallery;
                 
@@ -121,25 +120,22 @@
                 const adminGallery = document.getElementById('adminGallery');
                 const adminSection = document.getElementById('adminSection');
 
-                let currentTarget = userGallery; // เริ่มต้นให้ใส่ใน User Gallery ก่อน
+                let currentTarget = userGallery; 
 
-                // วนลูปเช็คองค์ประกอบทั้งหมดที่ส่งมาจาก portfolio.html
                 Array.from(tempDiv.children).forEach(child => {
                     if (child.tagName === 'H5') {
-                        // ถ้าเจอหัวข้อ ให้เช็คว่าเป็น Admin หรือไม่
                         if (child.innerText.toLowerCase().includes('admin')) {
-                            currentTarget = adminGallery; // เปลี่ยนเป้าหมายไปใส่ Admin Gallery
-                            adminSection.style.display = 'block'; // โชว์ส่วน Admin
+                            currentTarget = adminGallery; 
+                            adminSection.style.display = 'block'; 
                         } else {
-                            currentTarget = userGallery; // กลับมาใส่ User Gallery
+                            currentTarget = userGallery; 
                         }
                     } else if (child.tagName === 'IMG') {
-                        // ถ้าเป็นรูปภาพ ให้เอาไปใส่ในเป้าหมายปัจจุบัน (User หรือ Admin)
+                        
                         const clonedImg = child.cloneNode(true);
                         currentTarget.appendChild(clonedImg);
                     }
                 });
-                // ----------------------------------------
 
                 const applyStyles = (galleryId) => {
                     const galleryImages = document.querySelectorAll(`#${galleryId} img`);
