@@ -6,6 +6,49 @@
     <title>Contact - My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        #copy-toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 50px;
+            padding: 16px;
+            position: fixed;
+            z-index: 3000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            border: 1px solid #9d4edd;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+
+        #copy-toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        .info-item {
+            cursor: pointer;
+            position: relative;
+        }
+        .info-item:active {
+            transform: scale(0.98);
+        }
+        .copy-hint {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #888;
+            border: 1px solid #555;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,14 +69,14 @@
                 <h1>Contact</h1>
             </div>
 
-            <a href="mailto:armthanasid30468@gmail.com" class="info-item">
+            <div class="info-item" onclick="copyToClipboard('armthanasid30468@gmail.com', 'Email copied!')">
                 <i class="fa-solid fa-envelope"></i>
-                <span>armthanasid30468@gmail.com</span>
-            </a>
+                <span id="email-text">armthanasid30468@gmail.com</span>              
+            </div>
             
-            <div class="info-item">
+            <div class="info-item" onclick="copyToClipboard('064-716-8562', 'Phone number copied!')">
                 <i class="fa-solid fa-phone"></i>
-                <span>064-716-8562</span>
+                <span>064-716-8562</span>           
             </div>
 
             <div class="social-section">
@@ -56,7 +99,7 @@
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a href="https://line.me/ti/p/yourid" target="_blank" class="social-btn line">
+                    <a href="https://line.me/ti/p/1fjNtqN_-k" target="_blank" class="social-btn line">
                         <i class="fa-brands fa-line"></i>
                     </a>
                 </div>
@@ -65,9 +108,28 @@
         </div>
     </div>
 
-    <footer>
-        <p>© 2025 THANASIT PHONYOTHA. All Rights Reserved.</p>
-    </footer>
+    <div id="copy-toast">Copied to clipboard!</div>
+
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(function() {
+                showToast(message);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+                prompt("Copy this email:", text);
+            });
+        }
+
+        function showToast(message) {
+            var toast = document.getElementById("copy-toast");
+            toast.innerText = message;
+            toast.className = "show";
+            
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
