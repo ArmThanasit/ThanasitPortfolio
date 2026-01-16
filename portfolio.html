@@ -28,167 +28,12 @@
         <h1 class="section-title">PORTFOLIO</h1>
 
         <div class="filter-container">
-            <button class="filter-btn active" onclick="filterProjects('game')">Game Dev</button>
+            <button class="filter-btn active" onclick="filterProjects('all')">Show All</button>
+            <button class="filter-btn" onclick="filterProjects('game')">Game Dev</button>
             <button class="filter-btn" onclick="filterProjects('software')">Mobile App</button>
         </div>
 
         <div class="project-list">
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="image/cg7.png" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>ChessGame</h4>
-                    <p>A strategic board game developed to apply Object-Oriented Programming (OOP) principles using Java.</p>
-                </div>
-                
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span>Completed</span></p>
-                        
-                        <p><strong>Overview:</strong> Developed as a coursework project with the objective of building a game application based on specific requirements. The project focused on applying Object-Oriented Programming (OOP) principles to create a functional board game system using Java.</p>
-                        
-                        <p><strong>Key Responsibilities:</strong></p>
-                        <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
-                            <li><strong>System Integration:</strong> Managed UI navigation between Main Menu, Gameplay, and Leaderboard scenes.</li>
-                            <li><strong>Game Mechanics:</strong> Implemented "Valid Move Highlighting" algorithm to guide player moves.</li>
-                            <li><strong>Scoring System:</strong> Developed logic for tracking wins/losses and updating rankings.</li>
-                            <li><strong>Data Management: </strong> Created a player search feature to filter and retrieve score records stored in text files.</li>
-                        </ul>
-
-                        <p><strong>Languages:</strong> Java</p>
-                        <p><strong>Tools:</strong> Eclipse IDE</p>
-
-                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://github.com/ArmThanasit/ChessGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="image/cg2.png">
-                        <img src="image/cg1.png">
-                        <img src="image/cg3.png">
-                        <img src="image/cg4.png">
-                        <img src="image/cg5.png">
-                        <img src="image/cg6.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="image/egg1.png" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>Egg A Luck</h4>
-                    <p>A Game Jam project focused on RNG mechanics and collection systems, featuring dynamic egg spawning gameplay.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span>Work in Progress</span></p>
-
-                        <p><strong>Overview:</strong> Developed as a Mini Project for the Computer Game Development course under Game Jam-style constraints. The project followed a Q1 Seasonal Event prompt, leading to the creation of an Easter-themed game. It is designed as a casual, fast-paced game focusing on quick gameplay loops.</p>
-                        
-                        <p><strong>Key Responsibilities:</strong></p>
-                        <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
-                            <li><strong>Game Design:</strong> Collaborated on the Game Design Document (GDD) to define core gameplay mechanics and the game's overall theme.</li>
-                            <li><strong>Character Mechanics:</strong> Implemented C# scripts for Character Movement and the Combat System to ensure responsive control and interaction.</li>
-                            <li><strong>Item System:</strong> Developed an RNG System (Random Number Generation) to manage the spawning logic and probability of various egg types.</li>
-                            <li><strong>Enemy System:</strong> Programmed Enemy AI to autonomously track, chase, and consume Chickens and Bunnys using tag-based pathfinding logic.</li>
-                            <li><strong>Buff & Debuff System:</strong> Designed a dynamic modifier system where specific units (Guardian Bunnies) apply stacking buffs to global game parameters.</li>
-                            <li><strong>Audio System:</strong> Engineered the Audio Manager and settings UI to allow for real-time volume adjustment (SFX and Music).</li>
-                        </ul>
-                         <p><strong>Languages:</strong> C# </p>
-                        <p><strong>Tools:</strong> Unity , Visual Studio 2022</p>
-                        
-                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://github.com/ArmThanasit/Eggaluck" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                            
-                            <a href="https://www.youtube.com/watch?v=-rtPCMIN2Mo" target="_blank" style="text-decoration: none; background: #cc0000; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #cc0000; transition: 0.3s;">
-                                <i class="fa-brands fa-youtube"></i> Watch Gameplay
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="data-gallery">
-                        <img src="image/egg2.png">
-                        <img src="image/egg3.png">
-                        <img src="image/egg4.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="image/tw1.png" alt="Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>TowerBox</h4>
-                    <p>A physics-based tower building game utilizing 2D physics mechanics and C# scripting in Unity.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span>Completed</span></p>
-
-                        <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class. The primary objective was to master Unity Engine fundamentals focusing on C# scripting, 2D physics mechanics.</p>
-                        <p><strong>Languages:</strong> C# </p>
-                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
-
-                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://johnarm.itch.io/towerbox" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
-                                <i class="fa-brands fa-itch-io"></i> Play on Itch.io
-                            </a>
-                            <a href="https://github.com/ArmThanasit/TowerBox" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="image/tw2.png">
-                        <img src="image/tw3.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
-                <div class="cert-img-wrapper project-img">
-                    <img src="image/Snake.png" alt="Snake Game Cover">
-                </div>
-                <div class="cert-content">
-                    <h4>Snake Game</h4>
-                    <p>A classic arcade game implementation focusing on directional movement and dynamic tail growth mechanics.</p>
-                </div>
-
-                <div class="hidden-data">
-                    <div class="data-desc">
-                        <p><strong>Status:</strong> <span>Completed</span></p>
-
-                        <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class to master Unity Engine fundamentals, specifically focusing on C# scripting to implement directional movement and dynamic tail growth mechanics.</p>
-                        <p><strong>Languages:</strong> C#</p>
-                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
-
-                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
-                            <a href="https://johnarm.itch.io/snakegame" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
-                                <i class="fa-brands fa-itch-io"></i> Play on Itch.io
-                            </a>
-                            <a href="https://github.com/ArmThanasit/SnakeGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="data-gallery">
-                        <img src="image/sn1.png">
-                        <img src="image/sn2.png">
-                        <img src="image/sn3.png">
-                    </div>
-                </div>
-            </div>
 
             <div class="cert-card project-item software" onclick="openProject(this, 'mobile')">
                 <div class="cert-img-wrapper project-img">
@@ -252,6 +97,155 @@
                 </div>
             </div>
 
+            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
+                <div class="cert-img-wrapper project-img">
+                    <img src="image/cg7.png" alt="Cover">
+                </div>
+                <div class="cert-content">
+                    <h4>ChessGame</h4>
+                    <p>A strategic board game developed to apply Object-Oriented Programming (OOP) principles using Java.</p>
+                </div>
+                
+                <div class="hidden-data">
+                    <div class="data-desc">
+                        <p><strong>Status:</strong> <span>Completed</span></p>
+                        <p><strong>Overview:</strong> Developed as a coursework project with the objective of building a game application based on specific requirements. The project focused on applying Object-Oriented Programming (OOP) principles to create a functional board game system using Java.</p>
+                        <p><strong>Key Responsibilities:</strong></p>
+                        <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
+                            <li><strong>System Integration:</strong> Managed UI navigation between Main Menu, Gameplay, and Leaderboard scenes.</li>
+                            <li><strong>Game Mechanics:</strong> Implemented "Valid Move Highlighting" algorithm to guide player moves.</li>
+                            <li><strong>Scoring System:</strong> Developed logic for tracking wins/losses and updating rankings.</li>
+                            <li><strong>Data Management: </strong> Created a player search feature to filter and retrieve score records stored in text files.</li>
+                        </ul>
+                        <p><strong>Languages:</strong> Java</p>
+                        <p><strong>Tools:</strong> Eclipse IDE</p>
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
+                            <a href="https://github.com/ArmThanasit/ChessGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data-gallery">
+                        <img src="image/cg2.png"><img src="image/cg1.png"><img src="image/cg3.png"><img src="image/cg4.png"><img src="image/cg5.png"><img src="image/cg6.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
+                <div class="cert-img-wrapper project-img">
+                    <img src="image/egg.png" alt="Cover">
+                </div>
+                <div class="cert-content">
+                    <h4>Egg A Luck</h4>
+                    <p>A Game Jam project focused on RNG mechanics and collection systems, featuring dynamic egg spawning gameplay.</p>
+                </div>
+                <div class="hidden-data">
+                    <div class="data-desc">
+                        <p><strong>Status:</strong> <span>Work in Progress</span></p>
+                        <p><strong>Overview:</strong> Developed as a Mini Project for the Computer Game Development course under Game Jam-style constraints.</p>
+                         <p><strong>Key Responsibilities:</strong></p>
+                        <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: disc;">
+                            <li><strong>Game Design:</strong> Collaborated on the Game Design Document (GDD).</li>
+                            <li><strong>Character Mechanics:</strong> Implemented C# scripts for Character Movement.</li>
+                            <li><strong>Item System:</strong> Developed an RNG System.</li>
+                            <li><strong>Enemy System:</strong> Programmed Enemy AI.</li>
+                            <li><strong>Buff & Debuff System:</strong> Designed a dynamic modifier system.</li>
+                            <li><strong>Audio System:</strong> Engineered the Audio Manager.</li>
+                        </ul>
+                         <p><strong>Languages:</strong> C# </p>
+                        <p><strong>Tools:</strong> Unity , Visual Studio 2022</p>
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
+                            <a href="https://johnarm.itch.io/egg-a-luck" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
+                                <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                            </a>
+                            <a href="https://github.com/ArmThanasit/Eggaluck" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                               
+                        </div>
+                    </div>
+                    <div class="data-gallery">
+                        <img src="image/egg1.png">
+                        <img src="image/egg2.png">
+                        <img src="image/egg3.png">
+                        <img src="image/egg4.png">
+                        <img src="image/egg5.png">
+                        <img src="image/egg6.png">
+                        <img src="image/egg7.png">
+                        <img src="image/egg8.png">
+                        <img src="image/egg10.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
+                <div class="cert-img-wrapper project-img">
+                    <img src="image/Snake.png" alt="Snake Game Cover">
+                </div>
+                <div class="cert-content">
+                    <h4>Snake Game</h4>
+                    <p>A classic arcade game implementation focusing on directional movement and dynamic tail growth mechanics.</p>
+                </div>
+                <div class="hidden-data">
+                    <div class="data-desc">
+                        <p><strong>Status:</strong> <span>Completed</span></p>
+                        <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class.</p>
+                        <p><strong>Languages:</strong> C#</p>
+                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
+                            <a href="https://johnarm.itch.io/snakegame" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
+                                <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                            </a>
+                            <a href="https://github.com/ArmThanasit/SnakeGame" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data-gallery">
+                        <img src="image/sn1.png">
+                        <img src="image/sn2.png">
+                        <img src="image/sn3.png">
+                        <img src="image/sn4.png">
+                        <img src="image/sn5.png">
+                        <img src="image/sn6.png">
+                        <img src="image/sn7.png">
+                        <img src="image/sn8.png">
+                        <img src="image/sn9.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project-item game" onclick="openProject(this, 'game')">
+                <div class="cert-img-wrapper project-img">
+                    <img src="image/tw1.png" alt="Cover">
+                </div>
+                <div class="cert-content">
+                    <h4>TowerBox</h4>
+                    <p>A physics-based tower building game utilizing 2D physics mechanics and C# scripting in Unity.</p>
+                </div>
+                <div class="hidden-data">
+                    <div class="data-desc">
+                        <p><strong>Status:</strong> <span>Completed</span></p>
+                        <p><strong>Overview:</strong> Developed as a coursework project in the Computer Game Design class.</p>
+                        <p><strong>Languages:</strong> C# </p>
+                        <p><strong>Tools:</strong> Unity ,visual studio 2022</p>
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation();">
+                            <a href="https://johnarm.itch.io/towerbox" target="_blank" style="text-decoration: none; background: #fa5c5c; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; border: 1px solid #fa5c5c;">
+                                <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                            </a>
+                            <a href="https://github.com/ArmThanasit/TowerBox" target="_blank" style="text-decoration: none; background: #333; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; transition: 0.3s;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data-gallery">
+                        <img src="image/tw2.png"><img src="image/tw3.png">
+                    </div>
+                </div>
+            </div>
+
+            
+
         </div>
     </div>
 
@@ -285,14 +279,16 @@
             
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                if(btn.textContent.toLowerCase().includes(category)) {
+                if(category === 'all' && btn.textContent.includes('All')) {
+                     btn.classList.add('active');
+                } else if(btn.textContent.toLowerCase().includes(category) && category !== 'all') {
                     btn.classList.add('active');
                 }
             });
 
             projects.forEach(project => {
-                if (project.classList.contains(category)) {
-                    project.style.display = 'flex';
+                if (category === 'all' || project.classList.contains(category)) {
+                    project.style.display = 'flex'; // หรือใช้ block/flex ตาม css เดิม
                 } else {
                     project.style.display = 'none';
                 }
@@ -320,7 +316,8 @@
             }
         }
 
-        filterProjects('game');
+        // เริ่มต้นให้โชว์ทั้งหมด (Show All) เพื่อแก้ปัญหา Mobile App หาย
+        filterProjects('all');
     </script>
 
 </body>
